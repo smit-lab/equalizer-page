@@ -1,0 +1,40 @@
+//downloadBTN
+
+@mixin downloadBTN {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: rem(12);
+  font-size: rem(18);
+  font-weight: 700;
+  line-height: 1.78;
+  height: rem(61);
+  gap: rem(7.92);
+  width: 100%;
+  background-color: $almostBlack;
+  color: $almostWhite;
+}
+
+@mixin max-width($maxWidth) {
+  max-width: rem($maxWidth);
+  margin: 0 auto;
+}
+
+@mixin grid($grid-gap, $grid-columns) {
+  display: grid;
+  gap: rem($grid-gap);
+  grid-template-columns: $grid-columns;
+}
+
+@mixin flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //justify-content: center;
+}
+
+@mixin premium-EQ($topBottom, $leftRight) {
+  background-color: $orange;
+  border-radius: rem(12);
+  padding: rem($topBottom) rem($leftRight);
+}

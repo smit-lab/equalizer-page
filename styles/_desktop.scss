@@ -1,0 +1,120 @@
+@media (min-width: 1024px) {
+  body::after {
+    background-image: url(/assets/bg-main-desktop.png);
+    background-position: center 0;
+    top: rem(-180);
+    background-size: 120% auto;
+    height: 100%;
+  }
+
+  .navbar,
+  .hero,
+  .footer,
+  .premium {
+    @include max-width($maxWidth-desktop);
+  }
+
+  .header {
+    padding-top: rem(62);
+    margin-bottom: rem(127);
+  }
+
+  .hero {
+    padding-right: rem(240);
+    margin-bottom: rem(320);
+
+    &__heading {
+      line-height: inherit;
+      margin-bottom: rem(40);
+      letter-spacing: -1px;
+    }
+
+    &__para {
+      font-size: rem(20);
+      line-height: 1.7;
+    }
+
+    &::before {
+      content: "";
+      background-image: url(/assets/bg-pattern-1.svg);
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: rem(-40);
+      right: 0;
+      width: rem(312);
+      height: rem(468);
+    }
+  }
+
+  .premium {
+    background-size: rem(312) rem(468);
+    background-position: rem(336) rem(-40);
+    margin-bottom: rem(202);
+
+    &-box {
+      flex-direction: row;
+      gap: 0;
+      position: static;
+    }
+
+    &__phone-img {
+      position: absolute;
+      width: rem(312);
+      height: rem(642);
+      top: rem(-213);
+      left: rem(102);
+    }
+
+    &-EQ {
+      position: absolute;
+      bottom: rem(-115);
+      right: rem(95);
+      width: rem(446);
+      @include premium-EQ(54, 55);
+
+      &__heading {
+        font-size: rem(40);
+        line-height: 1.3;
+        margin-bottom: rem(22);
+      }
+
+      &__para {
+        font-size: rem(20);
+        line-height: 1.7;
+        margin-bottom: rem(39)
+      }
+
+      &__price {
+        margin-bottom: rem(46);
+      }
+
+      &__cta {
+
+        &--ios:hover {
+          background-color: $cyan;
+        }
+  
+        &--android:hover {
+          background-color: $yellow;
+        }
+      }
+    }
+  }
+
+  .footer {
+    @include grid(0, repeat(3, 1fr));
+    margin-bottom: rem(80);
+
+    &-social {
+      margin: 0;
+      justify-self: flex-end;
+      align-self: center;
+    }
+
+    & ion-icon:hover {
+      color: $orange;
+    }
+  }
+}
