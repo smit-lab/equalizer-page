@@ -15,7 +15,7 @@ body {
 
 body::after {
   content: "";
-  background-image: url(/assets/bg-main-mobile.png);
+  background-image: url(../assets/bg-main-mobile.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
@@ -63,7 +63,7 @@ body::after {
   height: rem(600);
   border-radius: rem(12);
   background-color: $almostBlack;
-  background-image: url(/assets/bg-pattern-2.svg);
+  background-image: url(../assets/bg-pattern-2.svg);
   background-repeat: no-repeat;
   background-position: center top;
   background-size: rem(280) rem(420);
